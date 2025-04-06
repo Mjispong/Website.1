@@ -46,7 +46,7 @@ h1 {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 .brick-section {
@@ -77,39 +77,46 @@ h1 {
     line-height: 1.6;
 }
   
-    /* Navigation */
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      background-color: #e9e9e9;
-      margin-bottom: 2rem;
-    }
-    
-    .nav-item {
-      flex: 1;
-      text-align: center;
-      padding: 1rem;
-      background-color: #e9e9e9;
-      transition: background-color 0.3s;
-    }
-    
-    .nav-item:hover {
-      background-color: #d4d4d4;
-    }
-    
-    .nav-item a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-  
+/* Navigation Crap */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e9e9e9;
+    margin: 2rem 0;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    background-color: #e9e9e9;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #d4d4d4;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.star-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+    /* Mobile Crap */
 
 @media (max-width: 600px) {
     body {
         background-color: yellow;
     }
     
-    .gallery-image {
+    .gallery-image, .star-image {
         width: 100%;
     }
     
@@ -120,10 +127,25 @@ h1 {
     .brick-section {
         padding: 20px 10px;
     }
+    
+    .navigation {
+        flex-direction: column;
+    }
 }
+  /* Footer Crap */
+   .footer {
+      background-color: #e9e9e9;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .footer h2 {
+      margin-bottom: 0.5rem;
+    }
 
 @media (min-width: 601px) {
-    .gallery-image {
+    .gallery-image, .star-image {
         max-width: 800px;
     }
 }
@@ -133,37 +155,38 @@ h1 {
 <div id="headline">
     <h1>The Gallery</h1>
 </div>
-  <div class="brick-section">
-    <div class="text-overlay">
-        <h2>Gallery Description</h2>
-        <p>Welcome to our gallery showcase. Here you'll find a collection of beautiful images and artwork. The brick background adds a nice textural element to highlight our featured content.</p>
-    </div>
 
 <div class="gallery-container">
+    <!-- First image -->
     <img src="Photos.213.png" alt="Gallery Photos" class="gallery-image">
-  
-  <div class="brick-section">
-    <div class="text-overlay">
-        <h2>Gallery Description</h2>
-        <p>Welcome to our gallery showcase. Here you'll find a collection of beautiful images and artwork. The brick background adds a nice textural element to highlight our featured content.</p>
+    
+    <!-- Brick section with text overlay -->
+    <div class="brick-section">
+        <div class="text-overlay">
+            <h2>Gallery Description</h2>
+            <p>Welcome to our gallery showcase. Here you'll find a collection of beautiful images and artwork. The brick background adds a nice textural element to highlight our featured content.</p>
+        </div>
+        
+        <!-- Second image still inside the brick section -->
+        <img src="Cooby.1.png" alt="Cooby Image" class="gallery-image">
     </div>
-  
-    <img src="Cooby.1.png" alt="Cooby Image" class="gallery-image">
     
-     <nav class="navigation">
-  <div class="nav-item"><a href="Website.html">Home</a></div>
-  <div class="nav-item"><a href="Website.1.html">The Gallery</a></div>
-  <div class="nav-item"><a href="Website.2.html">About Me</a></div>
-  <div class="nav-item"><a href="Website.3.html">Contact Me</a></div>
-</nav>
+    <!-- Navigation AFTER the brick section ends -->
+    <nav class="navigation">
+        <div class="nav-item"><a href="Website.html">Home</a></div>
+        <div class="nav-item"><a href="Website.1.html">The Gallery</a></div>
+        <div class="nav-item"><a href="Website.2.html">About Me</a></div>
+        <div class="nav-item"><a href="Website.3.html">Contact Me</a></div>
+    </nav>
+    
+    <!-- Star image after navigation -->
     <div style="text-align: center; margin: 2rem 0;">
-         <img src="Star.image.jpg" alt="Additional Image">
-      </div>
-    
+        <img src="Star.image.jpg" alt="Star Image" class="star-image">
+    </div>
+   <footer class="footer">
+      <h2>Contact info -Help - Etc.</h2>
+    </footer>
+  
 </div>
-
-
-</div>
-
 </body>
 </html>
