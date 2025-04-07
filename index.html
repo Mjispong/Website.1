@@ -3,21 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exercise 8: Responsive Web Design</title>
-<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet"> 
+<title>The Gallery</title>
+<link href="https://fonts.googleapis.com/css?family=Georgia|Roboto|Playfair+Display" rel="stylesheet">
 <style>
-/* Created by Matt Spong 2025-03-14*/
-  
-#headline {
-    position: relative;
-    background-image: url('Background-white.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
+/* Created by Matt Spong 2025-04-04*/
   
 body {
     font-family: "Roboto", sans-serif;
@@ -28,25 +17,44 @@ body {
 }
 
 h1 {
-    font-family: "Pacifico", cursive;
+    font-family: "Playfair Display", serif;
     font-size: 3em;
     color: black;
     margin: 0;
-    padding: .375em;
+    padding: 0.375em;
 }
 
-.gallery-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    display: block;
+  /* Making background/text work together at top*/
+#headline {
+    position: relative;
+    background-image: url('Background-white.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .gallery-container {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 0px;
+    padding: 0;
+  /* Added box shadow cause why not*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+.gallery-image, .star-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.star-image {
+    margin: 20px auto;
 }
 
 .brick-section {
@@ -67,8 +75,8 @@ h1 {
 }
 
 .text-overlay h2 {
-    font-family: "Pacifico", cursive;
-    color: #333;
+    font-family: "Playfair Display", serif;
+    color: #000;
     margin-top: 0;
 }
 
@@ -77,11 +85,10 @@ h1 {
     line-height: 1.6;
 }
   
-/* Navigation Crap */
+/* Navigation crap*/
 .navigation {
     display: flex;
     justify-content: space-between;
-    background-color: #e9e9e9;
     margin: 2rem 0;
 }
 
@@ -90,36 +97,36 @@ h1 {
     text-align: center;
     padding: 1rem;
     background-color: #EF6024;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, font-size 0.3s;
+    font-family: "Georgia", serif;
 }
 
 .nav-item:hover {
     background-color: #109FDB;
-      font-family: "Roboto", serif;
-      font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: 500;
 }
 
-.star-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    display: block;
+/* Footer Crap*/
+.footer {
+    background-color: #B33F00;
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    margin: 20px auto 0;
+    font-family: "Georgia", serif;
 }
-    /* Mobile Crap */
 
+/* Adding the Mobile feature */
 @media (max-width: 600px) {
     body {
         background-color: yellow;
-    }
-    
-    .gallery-image, .star-image {
-        width: 100%;
     }
     
     h1 {
@@ -133,16 +140,6 @@ h1 {
     .navigation {
         flex-direction: column;
     }
-}
-  /* Footer Crap */
-  .footer {
-    background-color: #B33F00;
-    width: 80%;
-    text-align: center;
-    padding: 15px;
-    font-size: 16px;
-    margin-top: 20px;
-      margin: 20px auto 0; 
 }
 
 @media (min-width: 601px) {
@@ -158,21 +155,17 @@ h1 {
 </div>
 
 <div class="gallery-container">
-    <!-- First image -->
     <img src="Photos.213.png" alt="Gallery Photos" class="gallery-image">
     
-    <!-- Brick section with text overlay -->
     <div class="brick-section">
         <div class="text-overlay">
             <h2>Reference and abstract painting:</h2>
             <p>While some of my artworks rely on a subject for composition, I make them my own with use of colour, dimension and style. The following works were created by me, in 30 minutes or less</p>
         </div>
         
-        <!-- Second image still inside the brick section -->
         <img src="Cooby.1.png" alt="Cooby Image" class="gallery-image">
     </div>
     
-    <!-- Navigation AFTER the brick section ends -->
     <nav class="navigation">
         <div class="nav-item"><a href="Website.html">Home</a></div>
         <div class="nav-item"><a href="Website.1.html">The Gallery</a></div>
@@ -180,14 +173,11 @@ h1 {
         <div class="nav-item"><a href="Website.3.html">Contact Me</a></div>
     </nav>
     
-    <!-- Star image after navigation -->
-    <div style="text-align: center; margin: 2rem 0;">
-        <img src="Star.image.jpg" alt="Star Image" class="star-image">
-    </div>
-   <footer class="footer">
-        <div class="footer">Contact info -Help - Etc.</div>
+    <img src="Star.image.jpg" alt="Star background line art image" class="star-image">
+    
+    <footer class="footer">
+        <div>Good stuff right! Want to contact me? Find my info in the "Contact Me" section</div>
     </footer>
-  
 </div>
 </body>
 </html>
